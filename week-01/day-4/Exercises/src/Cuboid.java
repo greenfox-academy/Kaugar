@@ -9,11 +9,11 @@ public class Cuboid {
 //
 // Surface Area: 600
         double surface = 6 *(side_a * side_b);
-        System.out.println("Surface Area: " + surface);
+        System.out.println("Surface Area: " + (int)surface);
 
 // Volume: 1000
         double volume = side_a * side_b * side_c;
-        System.out.println("Volume: " + volume);
+        System.out.println("Volume: " + (int)volume);
 
 
 
