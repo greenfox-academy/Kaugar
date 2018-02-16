@@ -3,8 +3,7 @@ public class MultiplicationTable {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int x = 0;
-        while (x < 10) {
+        while (true) {
             System.out.println("Give me a whole number:");
             int userInput1 = scanner.nextInt();
             for (int i = 1; i < 11; i++) {
