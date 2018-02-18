@@ -5,7 +5,7 @@ public class GuessTheNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        System.out.println("Guess the number betweem 0 and 100");
+        System.out.println("Guess the number between 0 and 100");
 
         int findout = random.nextInt(100) + 1;
 
@@ -27,5 +27,5 @@ public class GuessTheNumber {
 // of the following:
 //
 // The stored number is higher
-// The stried number is lower
+// The stored number is lower
 // You found the number: 8
