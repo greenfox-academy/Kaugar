@@ -4,18 +4,26 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Diagonals {
+public class GoToCenter {
     public static void mainDraw(Graphics graphics) {
-        // Draw the canvas' diagonals.
-        // If it starts from the upper-left corner it should be green, otherwise it should be red.
-        graphics.setColor(Color.GREEN);
-        graphics.drawLine(0,0,WIDTH,HEIGHT);
-        graphics.setColor(Color.RED);
-        graphics.drawLine(WIDTH,0,0,HEIGHT);
+        // Create a line drawing function that takes 2 parameters:
+        // The x and y coordinates of the line's starting point
+        // and draws a line from that point to the center of the canvas.
+        // Draw 3 lines with that function. Use loop for that.
 
-
+        int xcord = 80;
+        int ycord = 30;
+        drawLines(graphics,xcord,ycord);
 
     }
+    public static void drawLines (Graphics graphics, int x, int y) {
+
+        for (int i = 1; i < 4; i++) {
+            x = x + 20;
+            graphics.drawLine(x,y,WIDTH/2,HEIGHT/2);
+        }
+    }
+
 
     // Don't touch the code below
     static int WIDTH = 320;
