@@ -17,8 +17,6 @@ public class ColoredBox {
         graphics.drawLine(20,80,20,20);
 
 
-
-
     }
 
     // Don't touch the code below
