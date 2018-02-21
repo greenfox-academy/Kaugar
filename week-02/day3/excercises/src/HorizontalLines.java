@@ -10,9 +10,15 @@ public class HorizontalLines {
         // The x and y coordinates of the line's starting point
         // and draws a 50 long horizontal line from that point.
         // Draw 3 lines with that function. Use loop for that.
-
-
-
+        int startx = 30;
+        int starty = 30;
+        lineDrawing(graphics, startx, starty);
+    }
+    public static void lineDrawing (Graphics graphics, int x, int y){
+        for (int i = 0; i < 3; i++) {
+            y = y + 30;
+            graphics.drawLine(x,y,x+50,y);
+        }
     }
 
     // Don't touch the code below
