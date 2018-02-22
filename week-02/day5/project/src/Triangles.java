@@ -11,6 +11,7 @@ public class Triangles {
 
         int rowsOfTriangle = 30;
         triangleDrawer(graphics, rowsOfTriangle);
+        
 
 
     }
