@@ -29,31 +29,29 @@ public class Calculator {
         int number1 = Integer.valueOf(numbers[1]);
         int number2 = Integer.valueOf(numbers[2]);
 
-        calculator(number1,number2,numbers)
+        calculator(number1, number2, numbers);
     }
-    public static int calculator (int number1, int number2, String numbers[]) {
+
+    public static int calculator(int number1, int number2, String numbers[]) {
 
 
+        int result = 0;
         if (String.valueOf(numbers[0]).equals("+")) {
-            int sum = number1 + number2;
-            System.out.println("Result: " + sum);
+            result = number1 + number2;
+            System.out.println("Result: " + result);
         } else if (numbers[0].equals("-")) {
-            int neg = number1 - number2;
-            System.out.println("Result: " + neg);
+            result = number1 - number2;
+            System.out.println("Result: " + result);
         } else if (numbers[0].equals("*")) {
-            int multip = number1 * number2;
-            System.out.println("Result: " + multip);
+            result = number1 * number2;
+            System.out.println("Result: " + result);
         } else if (numbers[0].equals("/")) {
-            int div = number1 / number2;
-            System.out.println("Result: " + div);
+            result = number1 / number2;
+            System.out.println("Result: " + result);
         } else if (numbers[0].equals("%")) {
-            int div2 = number1 % number2;
-            System.out.println("Result: " + div2);
+            result = number1 % number2;
+            System.out.println("Result: " + result);
         }
-    }
-
-
-
-
+        return result;
     }
 }
