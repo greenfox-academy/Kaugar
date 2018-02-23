@@ -1,17 +1,20 @@
 import javax.swing.*;
 import java.awt.*;
 
-import static java.awt.image.ImageObserver.HEIGHT;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
+
 public class Triangles {
+    static int iterator = 0;
+    static int rowsOfTriangle = 30;
+
     public static void mainDraw(Graphics graphics) {
         // draw a red horizontal line to the canvas' middle.
         // draw a green vertical line to the canvas' middle.
 
-        int rowsOfTriangle = 30;
-        triangleDrawer(graphics, rowsOfTriangle);
-        
+
+        triangleDrawer(graphics, iterator);
+
 
 
     }
@@ -44,18 +47,29 @@ public class Triangles {
         }
     }
 
+
+
     // Don't touch the code below
     static int WIDTH = 700;
     static int HEIGHT = 700;
 
-    public static void main(String[] args) {
-        JFrame jFrame = new JFrame("Drawing");
+    public static void main(String[] args) throws InterruptedException {
+        JFrame jFrame = new JFrame("Triangles");
+        ImagePanel imagePanel = new ImagePanel();
         jFrame.setSize(new Dimension(WIDTH, HEIGHT));
         jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        jFrame.add(new ImagePanel());
+        jFrame.add(imagePanel);
         jFrame.setLocationRelativeTo(null);
         jFrame.setVisible(true);
+
+        while(iterator < rowsOfTriangle) {
+            imagePanel.repaint();
+            iterator++;
+            Thread.sleep(100);
+            System.out.println(iterator);
+        }
     }
+
 
     static class ImagePanel extends JPanel {
         @Override
