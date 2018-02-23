@@ -9,8 +9,6 @@ public class Triangles {
     static int rowsOfTriangle = 30;
 
     public static void mainDraw(Graphics graphics) {
-        // draw a red horizontal line to the canvas' middle.
-        // draw a green vertical line to the canvas' middle.
 
 
         triangleDrawer(graphics, iterator);
@@ -39,7 +37,6 @@ public class Triangles {
                 for (int j = 1; j <= row; j++) {
                     graphics.drawPolygon(trianglex, triangley, 3);
                 }
-
             }
             for (int g = 0; g < 3; g++) {
                 trianglex[g] = trianglex[g] -20 * row;
