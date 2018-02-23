@@ -4,8 +4,10 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
+
 public class LinePlayQuarters {
     public static void mainDraw(Graphics graphics) {
+
         int part = 4;
         Colors(graphics);
         CanvasSplitter(graphics, part);
@@ -58,7 +60,8 @@ public class LinePlayQuarters {
 
         while(true) {
             imagePanel.repaint();
-            Thread.sleep(1000);
+            Thread.sleep(10);
+
         }
     }
 
