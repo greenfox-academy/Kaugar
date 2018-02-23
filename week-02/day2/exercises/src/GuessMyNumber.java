@@ -8,7 +8,7 @@ public class GuessMyNumber {
         Scanner scanner = new Scanner(System.in);
         Map<String, Integer> map = GetDifficulty();
 
-        System.out.println("Set the level of difficulty(easy, normal, hard, EagleEye");
+        System.out.println("Set the level of difficulty(easy, normal, hard, EagleEye):");
         String input = scanner.nextLine();
         System.out.println("Set the range (e.g 100)");
         Integer inputRange = scanner.nextInt();
@@ -36,13 +36,13 @@ public class GuessMyNumber {
             }
             lives--;
         }
-        System.out.println("You lost!!!!");
+        System.out.println("You Are DEAD!!!!");
     }
 
     private static Map<String, Integer> GetDifficulty() {
         Map<String, Integer> map = new HashMap<>();
 
-        map.put("easy", 1);
+        map.put("easy", 10);
         map.put("normal", 5);
         map.put("hard", 3);
         map.put("EagleEye", 1);
