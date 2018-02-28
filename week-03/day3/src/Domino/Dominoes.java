@@ -1,10 +1,14 @@
+package Domino;
+
+import Domino.Domino;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Dominoes {
   public static void main(String[] args) {
     List<Domino> dominoes = initializeDominoes();
-    // You have the list of Dominoes
+    // You have the list of Domino.Dominoes
     // Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides
     // eg: [2, 4], [4, 3], [3, 5] ...
 

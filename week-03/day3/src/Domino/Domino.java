@@ -1,3 +1,5 @@
+package Domino;
+
 import java.util.Arrays;
 
 public class Domino {

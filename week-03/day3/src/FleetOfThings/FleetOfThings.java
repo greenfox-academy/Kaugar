@@ -1,3 +1,5 @@
+package FleetOfThings;
+
 public class FleetOfThings {
 
   public static void main(String[] args) {
@@ -8,7 +10,7 @@ public class FleetOfThings {
     // 3. [x] Stand up
     // 4. [x] Eat lunch
     Thing first = new Thing("Get milk");
-    Thing second = new Thing ("Remove the obstacles");
+    Thing second = new Thing("Remove the obstacles");
     Thing third = new Thing("Stand up");
     Thing fourth = new Thing("Eat lunch");
 

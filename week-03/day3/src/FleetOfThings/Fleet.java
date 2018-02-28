@@ -1,3 +1,7 @@
+package FleetOfThings;
+
+import FleetOfThings.Thing;
+
 import java.util.ArrayList;
 
 /**
