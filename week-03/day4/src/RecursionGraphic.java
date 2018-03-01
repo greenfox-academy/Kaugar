@@ -7,16 +7,21 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class RecursionGraphic {
   public static void mainDraw(Graphics graphics){
-    graphics.drawRect(0,0, WIDTH, HEIGHT);
+    graphics.setColor(Color.BLACK);
+    graphics.fillRect(0,0, WIDTH, HEIGHT);
     int size = WIDTH/3;
     drawRecusrion(4,size,size,size,graphics);
   }
   public static void drawRecusrion (int n, int x, int y, int size, Graphics graphics){
     if (n < 0) {
     }else{
+      graphics.setColor(Color.cyan);
       graphics.drawRect(x,y-size,size, size);
+      graphics.setColor(Color.MAGENTA);
       graphics.drawRect(x,y+size,size, size);
+      graphics.setColor(Color.ORANGE);
       graphics.drawRect(x+size,y,size, size);
+      graphics.setColor(Color.RED);
       graphics.drawRect(x-size,y,size, size);
       drawRecusrion(n-1,x+size/3,y+size+size/3,size/3,graphics);
       drawRecusrion(n-1,x+size/3,y-size+size/3,size/3,graphics);
