@@ -7,20 +7,27 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class RecursionGraphic {
   public static void mainDraw(Graphics graphics){
-  drawRecusrion(10,40,40,100,graphics);
-  graphics.drawRect(0,0, WIDTH, HEIGHT);
+    graphics.drawRect(0,0, WIDTH, HEIGHT);
+    int size = WIDTH/3;
+    drawRecusrion(4,size,size,size,graphics);
   }
   public static void drawRecusrion (int n, int x, int y, int size, Graphics graphics){
     if (n < 0) {
     }else{
-      graphics.drawRect(x,y,size, size);
-      drawRecusrion(n-1,WIDTH/3,HEIGHT/3,size/3,graphics);
+      graphics.drawRect(x,y-size,size, size);
+      graphics.drawRect(x,y+size,size, size);
+      graphics.drawRect(x+size,y,size, size);
+      graphics.drawRect(x-size,y,size, size);
+      drawRecusrion(n-1,x+size/3,y+size+size/3,size/3,graphics);
+      drawRecusrion(n-1,x+size/3,y-size+size/3,size/3,graphics);
+      drawRecusrion(n-1,x-size+size/3,y+size/3,size/3,graphics);
+      drawRecusrion(n-1,x+size+size/3,y+size/3,size/3,graphics);
     }
   }
 
   // Don't touch the code below
-  static int WIDTH = 800;
-  static int HEIGHT = 800;
+  static int WIDTH = 486;
+  static int HEIGHT = 486;
 
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
