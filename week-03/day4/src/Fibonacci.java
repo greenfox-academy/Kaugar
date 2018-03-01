@@ -1,6 +1,6 @@
 public class Fibonacci {
   public static void main(String[] args) {
-    System.out.println(fibonacciRecursive(5));
+    System.out.println(fibonacciRecursive(6));
 
   }
   public static int fibonacciRecursive (int n){
