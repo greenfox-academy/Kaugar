@@ -1,9 +1,9 @@
 public class Animal {
-  int hunger = 50;
-  int thirst = 50;
+  int hunger;
+  int thirst;
   public Animal(){
-    Animal monkey = new Animal();
-    Animal tiger = new Animal();
+    hunger = 50;
+    thirst = 50;
   }
   public void eat(){
     hunger--;
@@ -14,5 +14,8 @@ public class Animal {
   public void play(){
     hunger++;
     thirst++;
+  }
+  public int getHunger(){
+    return hunger;
   }
 }
