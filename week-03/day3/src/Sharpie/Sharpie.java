@@ -1,23 +1,18 @@
 package Sharpie;
 
 public class Sharpie {
-  String color;
-  double width;
-  int amount = 100;
+  private String color;
+  private float width;
+  private float inkAmount;
   public Sharpie (String color, float width){
-    Sharpie first = new Sharpie("blue", 3);
-    Sharpie second = new Sharpie("pink",5);
-    Sharpie third = new Sharpie("red",2);
-    Sharpie fourth = new Sharpie("grey",5);
+    this.color = color;
+    this.width = width;
+    this.inkAmount = 100;
   }
   public void use (){
-
-    amount--;
+    inkAmount--;
   }
-  public void useAll(){
-    this.amount = 0;
-  }
-  public int getAmount (){
-    return amount;
+  public float getInkamount(){
+     return inkAmount;
   }
 }
