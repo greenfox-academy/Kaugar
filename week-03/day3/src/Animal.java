@@ -13,6 +13,6 @@ public class Animal {
   }
   public void play(){
     hunger++;
-    thirst--;
+    thirst++;
   }
 }
