@@ -25,6 +25,14 @@ public class PirateMain {
     ship1.shipName = "BlackPearl";
     ship1.fillShip();
     System.out.println(ship1);
+    Ship ship2 = new Ship();
+    ship2.shipName = "WhitePearl";
+    ship2.fillShip();
+    System.out.println(ship2);
+
+    ship1.battle(ship2);
+    System.out.println(ship1);
+    System.out.println(ship2);
 
   }
 }
