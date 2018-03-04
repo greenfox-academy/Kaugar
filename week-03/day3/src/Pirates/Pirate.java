@@ -57,6 +57,14 @@ public class Pirate {
   public int getDrunkness() {
     return drunkness;
   }
+  @Override
+  public String toString() {
+    return
+            " ### His name is '" + name + '\'' +
+                    ", intoxication = " + drunkness +
+                    ", is passed out?: " + passOut +
+                    ", is he dead?: " + isDead +
+                    " ### ";
 
-
+  }
 }

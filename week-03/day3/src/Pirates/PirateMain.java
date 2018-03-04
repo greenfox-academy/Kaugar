@@ -19,5 +19,12 @@ public class PirateMain {
     pirate1.brawl(pirate2);
     System.out.println(2/3);
 
+    System.out.println(pirate1);
+
+    Ship ship1 = new Ship();
+    ship1.shipName = "BlackPearl";
+    ship1.fillShip();
+    System.out.println(ship1);
+
   }
 }
