@@ -1,3 +1,5 @@
+package Blog;
+
 public class MainBlog {
   public static void main(String[] args) {
 
