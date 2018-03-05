@@ -59,7 +59,7 @@ public class Ship {
         this.crew.get(i).drunkness = rand3;
       }
       return this.winner = true;
-      
+
     }else{
       System.out.println("The winner is: " + othership.shipName);
       Random random = new Random();
