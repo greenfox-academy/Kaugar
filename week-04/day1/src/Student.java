@@ -6,10 +6,12 @@ public class Student {
   int skippedDays;
 
   public void introduce() {
-    System.out.println("Hi, I'm " + name + ", a " + age + " year old " + gender + ".");
+    System.out.println("Hi, I'm " + name + ", a " + age + " year old "
+            + gender + " from " + previousOrganization + " who skipped "
+            + skippedDays + " days from the course already.");
   }
 
-  public void setGoal() {
+  public void getGoal() {
     System.out.println("Be a junior software developer!");
   }
 
@@ -22,13 +24,13 @@ public class Student {
     this.age = age;
     this.gender = gender;
     this.previousOrganization = previousOrganization;
-    skippedDays = 0;
+    this.skippedDays = 0;
   }
 
   public Student() {
     this.name = "Jane Doe";
     this.age = 30;
     this.gender = "female";
-    this.previousOrganization = "The School of Life"
+    this.previousOrganization = "The School of Life";
   }
 }
