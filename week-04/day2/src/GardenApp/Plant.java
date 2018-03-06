@@ -7,7 +7,7 @@ public class Plant {
   int needOfWater;
   double absorbing;
 
-  public void needswater() {
+  public void needsWater() {
     if (water < needOfWater) {
       System.out.println("The " + color + " " + type + " needs water");
     }else {

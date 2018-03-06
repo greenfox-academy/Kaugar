@@ -27,7 +27,7 @@ public class Garden {
     }
 
     for (int i = 0; i < plants.size() ; i++) {
-      plants.get(i).needswater();
+      plants.get(i).needsWater();
     }
   }
 
