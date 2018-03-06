@@ -1,11 +1,11 @@
 package GardenApp;
 
 public class Plant {
-  String type;
-  double water = 0;
-  String color;
-  int needOfWater;
-  double absorbing;
+  private String type;
+  private double water = 0;
+  private String color;
+  private int needOfWater;
+  private double absorbing;
 
   public void needsWater() {
     if (water < needOfWater) {
@@ -16,6 +16,14 @@ public class Plant {
   }
   public void watering (double water){
     this.water += absorbing * water;
+  }
+
+  public double getWater() {
+    return water;
+  }
+
+  public int getNeedOfWater() {
+    return needOfWater;
   }
 
   public static class Tree extends Plant{

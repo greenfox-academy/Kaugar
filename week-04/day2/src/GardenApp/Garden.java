@@ -3,7 +3,7 @@ package GardenApp;
 import java.util.ArrayList;
 
 public class Garden {
-  ArrayList<Plant> plants;
+  private ArrayList<Plant> plants;
 
   public Garden () {
     this.plants = new ArrayList<>();
@@ -19,7 +19,7 @@ public class Garden {
     System.out.println("\n" + "Watering with " + waterToGarden);
     int counter = 0;
     for (int i = 0; i < plants.size(); i++) {
-      if (plants.get(i).water < plants.get(i).needOfWater){
+      if (plants.get(i).getWater() < plants.get(i).getNeedOfWater()){
         counter++;
         double waterToPlants = waterToGarden/counter;
         plants.get(i).watering(waterToPlants);
