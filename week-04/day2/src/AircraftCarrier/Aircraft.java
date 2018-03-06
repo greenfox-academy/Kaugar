@@ -10,6 +10,10 @@ public class Aircraft {
     ammo = 0;
     return damage;
   }
+  public void refill (){
+
+
+  }
   public static class F16 extends Aircraft {
     public F16 (){
       super.maxAmmo = 8;

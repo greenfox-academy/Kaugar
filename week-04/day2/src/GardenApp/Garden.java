@@ -17,10 +17,17 @@ public class Garden {
   public void watering (double waterToGarden){
 
     System.out.println("\n" + "Watering with " + waterToGarden);
-
-    double waterToPlants = waterToGarden/plants.size();
+    int counter = 0;
+    for (int i = 0; i < plants.size(); i++) {
+      if (plants.get(i).water < plants.get(i).needOfWater){
+        counter++;
+      }
+    }
+    double waterToPlants = waterToGarden/counter;
     for (int i = 0; i < plants.size() ; i++) {
-      plants.get(i).watering(waterToPlants);
+      if (plants.get(i).water < plants.get(i).needOfWater){
+        plants.get(i).watering(waterToPlants);
+      }
     }
     for (int i = 0; i < plants.size() ; i++) {
       plants.get(i).needswater();
