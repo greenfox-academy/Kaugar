@@ -30,12 +30,14 @@ public class Aircraft {
   }
   public static class F16 extends Aircraft {
     public F16 (){
+      super.type = "F16";
       super.maxAmmo = 8;
       super.baseDamage = 30;
     }
   }
   public static class F35 extends Aircraft {
     public F35 (){
+      super.type = "F35";
       super.maxAmmo = 12;
       super.baseDamage = 30;
     }
