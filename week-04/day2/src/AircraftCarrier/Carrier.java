@@ -3,10 +3,10 @@ package AircraftCarrier;
 import java.util.ArrayList;
 
 public class Carrier {
-  ArrayList<Aircraft> aircrafts = new ArrayList<>();
-  int storedAmmo;
-  int healthPoints;
-  int totalDamage;
+  private ArrayList<Aircraft> aircrafts = new ArrayList<>();
+  private int storedAmmo;
+  private int healthPoints;
+  private int totalDamage;
 
   public Carrier (int storedAmmo, int healthPoints){
     this.storedAmmo = storedAmmo;
