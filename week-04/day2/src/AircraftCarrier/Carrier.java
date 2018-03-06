@@ -1,12 +1,12 @@
 package AircraftCarrier;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Carrier {
   ArrayList<Aircraft> aircrafts = new ArrayList<>();
   int storedAmmo;
   int healthPoints;
+  int totalDamage;
 
   public Carrier (int storedAmmo, int healthPoints){
     this.storedAmmo = storedAmmo;
@@ -19,22 +19,34 @@ public class Carrier {
       aircrafts.add(new Aircraft.F35());
     }
   }
-  public void fill (Aircraft aircraft){
-    for (int i = 0; i < aircrafts.size(); i++) {
-      aircrafts.get(i).fill(storedAmmo);
+  public void fill (){
+    if (storedAmmo == 0){
+      System.out.println("Sorry you ran out of ammo!");
+    } else {
+      for (int i = 0; i < aircrafts.size(); i++) {
+        storedAmmo -= aircrafts.get(i).refill();
+      }
     }
   }
-  public void fight (Carrier carrier){
+  public void fight (Carrier enemycarrier){
     for (int i = 0; i < aircrafts.size(); i++) {
-      healthPoints -= aircrafts.get(i).fight();
+      enemycarrier.healthPoints -= this.aircrafts.get(i).fight();
+      this.aircrafts.get(i).setAmmo(0);
     }
   }
   public void getStatus (){
-    System.out.println("HP: " + healthPoints + ", Aircraft count: " + aircrafts.size() +
-            ", Ammo Storage: " + storedAmmo + ", Total damage: ");
-    System.out.println("Aircrafts:");
-    for (int i = 0; i < aircrafts.size(); i++) {
-      aircrafts.get(i).getStatus();
+    if (healthPoints == 0){
+      System.out.println("It's dead Jim :(");
+    }else {
+      for (int i = 0; i < aircrafts.size(); i++) {
+      totalDamage += aircrafts.get(i).getAmmo()* aircrafts.get(i).getBaseDamage();
+      }
+      System.out.println("HP: " + healthPoints + ", Aircraft count: " + aircrafts.size() +
+            ", Ammo Storage: " + storedAmmo + ", Total damage: " + totalDamage);
+      System.out.println("Aircrafts:");
+      for (int i = 0; i < aircrafts.size(); i++) {
+        aircrafts.get(i).getStatus();
+      }
     }
   }
 
@@ -45,6 +57,16 @@ public class Carrier {
     carrier1.addAircraft("f16");
     carrier1.addAircraft("f35");
     carrier1.getStatus();
+    carrier1.fill();
+    carrier1.getStatus();
+    Carrier carrier2 = new Carrier(2000,1000);
+    carrier2.addAircraft("f16");
+    carrier2.addAircraft("f35");
+    carrier2.fill();
+    carrier2.getStatus();
+
+    carrier1.fight(carrier2);
+    carrier2.getStatus();
   }
 
 }

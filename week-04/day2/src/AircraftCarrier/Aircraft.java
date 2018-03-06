@@ -1,24 +1,23 @@
 package AircraftCarrier;
 
 public class Aircraft {
-  int ammo = 0;
-  int maxAmmo;
-  int baseDamage;
-  String type;
+  private int ammo = 0;
+  private int maxAmmo;
+  private int baseDamage;
+  private String type;
 
   public int fight (){
     int damage = this.ammo * this.baseDamage;
     ammo = 0;
     return damage;
   }
-  public int fill (int remaining){
+  public int refill (){
     int ammoNeeded = this.maxAmmo - this.ammo;
-    int filledAmmo = 0;
+    int remaining = 0;
     for (int i = 0; i < ammoNeeded; i++) {
       this.ammo++;
-      filledAmmo++;
+      remaining++;
     }
-    remaining -= filledAmmo;
     return remaining;
   }
 
@@ -39,7 +38,19 @@ public class Aircraft {
     public F35 (){
       super.type = "F35";
       super.maxAmmo = 12;
-      super.baseDamage = 30;
+      super.baseDamage = 50;
     }
+  }
+
+  public int getAmmo() {
+    return ammo;
+  }
+
+  public int getBaseDamage() {
+    return baseDamage;
+  }
+
+  public void setAmmo(int ammo) {
+    this.ammo = ammo;
   }
 }
