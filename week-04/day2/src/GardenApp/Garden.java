@@ -21,14 +21,11 @@ public class Garden {
     for (int i = 0; i < plants.size(); i++) {
       if (plants.get(i).water < plants.get(i).needOfWater){
         counter++;
-      }
-    }
-    double waterToPlants = waterToGarden/counter;
-    for (int i = 0; i < plants.size() ; i++) {
-      if (plants.get(i).water < plants.get(i).needOfWater){
+        double waterToPlants = waterToGarden/counter;
         plants.get(i).watering(waterToPlants);
       }
     }
+
     for (int i = 0; i < plants.size() ; i++) {
       plants.get(i).needswater();
     }
