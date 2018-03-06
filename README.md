@@ -1,6 +1,6 @@
 # Martin Weltler
 
-Here are my repositories:
+Here is my repository:
 
 # [First Week](https://github.com/greenfox-academy/Kaugar/tree/master/week-01)
 It is about expressions and control flow in JAVA and basic directory management. And of course some lame HTML pages just for practice.
