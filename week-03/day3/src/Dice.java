@@ -7,10 +7,11 @@ public class Dice {
 //    You can reroll with reroll()
 //    Your task is to get where all dice is a 6
   int[] dices = new int[6];
+  int diceSides = 6;
 
   public int[] roll() {
     for (int i = 0; i < dices.length; i++) {
-      dices[i] = (int) (Math.random() * 6) + 1;
+      dices[i] = (int) (Math.random() * diceSides) + 1;
     }
     return dices;
   }
@@ -25,15 +26,16 @@ public class Dice {
 
   public void reroll() {
     for (int i = 0; i < dices.length; i++) {
-      dices[i] = (int) (Math.random() * 6) + 1;
+      dices[i] = (int) (Math.random() * diceSides) + 1;
     }
   }
 
   public void reroll(int k) {
-    dices[k] = (int) (Math.random() * 6) + 1;
+    dices[k] = (int) (Math.random() * diceSides) + 1;
   }
 
   public static void main(String[] args) {
+    int rolls = 6;
     Dice myDice = new Dice();
     myDice.roll();
 
@@ -42,7 +44,7 @@ public class Dice {
         myDice.reroll(i);
       }
     }
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < rolls; i++) {
       System.out.println(myDice.getCurrent(i));
     }
   }
