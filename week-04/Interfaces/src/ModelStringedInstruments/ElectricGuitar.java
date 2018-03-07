@@ -1,25 +1,19 @@
 package ModelStringedInstruments;
 
-import ModelStringedInstruments.StringedInstrument;
 
 public class ElectricGuitar extends StringedInstrument {
-  private int strings;
 
-  public ElectricGuitar(){
-    this.strings = 6;
+
+  public ElectricGuitar() {
+    super(6);
   }
 
-  public ElectricGuitar( int strings){
-    this.strings = strings;
-    }
-
-  @Override
-  public void sound() {
-    System.out.println("Twang");
+  public ElectricGuitar(int strings) {
+    super(strings);
   }
 
   @Override
-  public void play() {
-
+  public String sound() {
+    return "Twang";
   }
 }

@@ -1,9 +1,20 @@
 package ModelStringedInstruments;
 
-import ModelStringedInstruments.Instrument;
 
 public abstract class StringedInstrument extends Instrument {
   private int numberOfStrings;
 
-  public abstract void sound();
+  public StringedInstrument(int numberOfStrings) {
+    this.numberOfStrings = numberOfStrings;
+  }
+
+  public abstract String sound();
+
+  @Override
+  public void play() {
+    System.out.println(this.getClass().getSimpleName() + ", is a " + numberOfStrings +
+            "-stringed instrument that goes " + sound());
+  }
 }
+
+
