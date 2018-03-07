@@ -47,6 +47,6 @@ public class Domino implements Comparable<Domino>,Printable {
 
   @Override
   public void printAllFields() {
-    
+
   }
 }
