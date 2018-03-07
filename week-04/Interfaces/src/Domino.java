@@ -1,8 +1,10 @@
+import Printable.Printable;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Domino implements Comparable<Domino> {
+public class Domino implements Comparable<Domino>,Printable {
   private final int[] values;
 
   public Domino(int valueA, int valueB) {
@@ -41,5 +43,10 @@ public class Domino implements Comparable<Domino> {
       return 1;
     else
       return -1;
+  }
+
+  @Override
+  public void printAllFields() {
+    
   }
 }
