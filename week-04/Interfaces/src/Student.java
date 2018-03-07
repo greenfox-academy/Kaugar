@@ -34,6 +34,7 @@ public class Student extends Person implements Cloneable {
     Student john = new Student("John", 20,"male", "BME");
     Student john2 = (Student)john.clone();
 
+    
     john2.introduce();
   }
 }
