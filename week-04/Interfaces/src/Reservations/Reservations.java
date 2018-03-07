@@ -34,6 +34,9 @@ public class Reservations implements Reservatory {
   }
 
   public static void main(String[] args) {
-    
+    Reservations reservation = new Reservations();
+    for (int i = 0; i < 8; i++) {
+      System.out.println("Booking# " + reservation.getCodeBooking() + " for " + reservation.getDowBooking());
+    }
   }
 }
