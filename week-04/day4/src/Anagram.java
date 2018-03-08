@@ -3,7 +3,9 @@ import java.util.Arrays;
 public class Anagram {
 
   public boolean anagram (String word1, String word2){
-    if (word1.length() != word2.length())
+    if (word1.length() != word2.length()){
+      return false;
+    }
     word1=word1.toLowerCase();
     word2=word2.toLowerCase();
     char[] charfirst = word1.toCharArray();
