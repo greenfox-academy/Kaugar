@@ -1,13 +1,18 @@
-import junit.framework.TestCase;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class AppleTest extends TestCase {
+public class AppleTest {
+
+  Apple myObject;
+  @Before
+  public void setUp(){
+    myObject = new Apple();
+  }
 
   @Test
   public void getApple() {
-    Apple myObject = new Apple();
     assertEquals("apple", myObject.getApple());
   }
 }
