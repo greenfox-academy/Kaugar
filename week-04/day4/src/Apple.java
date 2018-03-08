@@ -1,6 +1,11 @@
 public class Apple {
+  private String apple;
+
+  public Apple() {
+    this.apple = "apple";
+  }
+
   public String getApple() {
-    String apple = "apple";
     return apple;
   }
 }
