@@ -18,6 +18,10 @@ public class ExtensionTest {
   public void testAdd_2and3is5() {
     assertEquals(5, extension.add(2, 3));
   }
+  @Test
+  public void testAddfalse(){
+    assertNotEquals(4,extension.add(2,3));
+  }
 
   @Test
   public void testAdd_1and4is5() {
