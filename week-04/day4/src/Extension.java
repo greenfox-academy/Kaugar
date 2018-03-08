@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,14 +13,20 @@ public class Extension {
   }
 
   int maxOfThree(int a, int b, int c) {
-    if (a > b)
+    if (a > b && a > c)
       return a;
+    else if (b > c && b > a)
+      return b;
     else
       return c;
   }
 
-  int median(List<Integer> pool) {
-    return pool.get((pool.size()-1)/2);
+  public double median (List<Double> pool) {
+    if (pool.size() % 2 == 1)
+      return pool.get((pool.size())/2);
+    else
+      return pool.get(pool.size()/2) + pool.get(pool.size()/2-1)/ 2;
+
   }
 
   boolean isVowel(char c) {

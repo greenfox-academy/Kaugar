@@ -1,6 +1,8 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.Assert.*;
@@ -32,6 +34,10 @@ public class ExtensionTest {
   public void testMaxOfThree_first() {
     assertEquals(5, extension.maxOfThree(5, 4, 3));
   }
+  @Test
+  public void testMaxOfThree_second() {
+    assertEquals(5, extension.maxOfThree(3, 5, 4));
+  }
 
   @Test
   public void testMaxOfThree_third() {
@@ -40,12 +46,16 @@ public class ExtensionTest {
 
   @Test
   public void testMedian_four() {
-    assertEquals(5, extension.median(Arrays.asList(7,5,3,5)));
+    assertEquals(5, extension.median(Arrays.<Double>asList(5.0, 1.0, 4.0, 1.0)));
+  }
+  @Test
+  public void testMedian_four2() {
+    assertEquals(2.5, extension.median(Arrays.asList(1.0,1.0,4.0,5.0)));
   }
 
   @Test
   public void testMedian_five() {
-    assertEquals(3, extension.median(Arrays.asList(1,2,3,4,5)));
+    assertEquals(3, extension.median(Arrays.asList(1.0,2.0,3.0,4.0,5.0)));
   }
 
   @Test
