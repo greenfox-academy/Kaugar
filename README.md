@@ -10,3 +10,7 @@ It is about array and functions, data structures and some drawing practice! So m
 
 # [Third Week](https://github.com/greenfox-academy/Kaugar/tree/master/week-03)
 We practice file and exception handling, get some Objective Oriented knowledge and draw some real arts in a recursive way.
+
+# [Third Week](https://github.com/greenfox-academy/Kaugar/tree/master/week-04)
+We learnt some OO programming, including Inheritance, Abstracts and Interfaces aaand we did some testing of course.  
+And my Todo app is here: https://github.com/Kaugar/todo-app
