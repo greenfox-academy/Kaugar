@@ -13,7 +13,7 @@ public class SharpieTest {
   }
 
   @Test
-  public void getInkamounttest() {
+  public void getInkAmountTest() {
     testSharpie.use();
     testSharpie.use();
     assertEquals(98,testSharpie.getInkamount());
