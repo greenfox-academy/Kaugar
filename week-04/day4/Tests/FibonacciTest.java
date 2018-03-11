@@ -12,25 +12,25 @@ public class FibonacciTest {
   }
 
   @Test
-  public void fibonaccinumber() {
+  public void FibonacciNumberByIndex() {
     int number = 7;
 
     assertEquals(13, test.fibonaccinumber(number));
   }
   @Test
-  public void fibonaccinumberfalse() {
+  public void FibonacciNumberByIndexFalse() {
     int number = 7;
 
     assertNotEquals(16, test.fibonaccinumber(number));
   }
   @Test
-  public void fibonaccinumber0() {
+  public void FibonacciNumberByIndexAt0() {
     int number = 0;
 
     assertEquals(0, test.fibonaccinumber(number));
   }
   @Test
-  public void fibonaccinumber1() {
+  public void FibonacciNumberByIndexAt1() {
     int number = 1;
 
     assertEquals(1, test.fibonaccinumber(number));
