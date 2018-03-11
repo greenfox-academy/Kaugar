@@ -39,7 +39,7 @@ public class Domino implements Comparable<Domino>,Printable {
   public int compareTo(Domino domino){
     if(values[0] == domino.values[0])
       return 0;
-    else if(values[0]>domino.values[0])
+    else if(values[0] > domino.values[0])
       return 1;
     else
       return -1;
