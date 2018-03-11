@@ -1,7 +1,6 @@
 package ModelStringedInstruments;
 
 public class Violin extends StringedInstrument {
-  int strings;
   public Violin() {
     super(4);
   }
