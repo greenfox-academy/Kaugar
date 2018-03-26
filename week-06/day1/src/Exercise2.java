@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.OptionalDouble;
 
 public class Exercise2 {
   public static void main(String[] args) {
@@ -9,8 +10,12 @@ public class Exercise2 {
 
     double average = numbers
             .stream()
-            .filter(n -> n%2 == 1)
-            .
+            .filter(n -> n%2 != 0)
+            .mapToDouble(n -> n)
+            .average()
+            .getAsDouble();
+
+    System.out.println(average);
 
   }
 }
