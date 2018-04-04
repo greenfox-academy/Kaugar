@@ -18,8 +18,8 @@ public class BankAccount {
     return name;
   }
 
-  public double getBalance() {
-    return balance;
+  public String getBalance() {
+    return df.format(balance);
   }
 
   public String getAnimalType() {
