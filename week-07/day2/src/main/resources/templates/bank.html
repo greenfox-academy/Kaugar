@@ -32,11 +32,13 @@
 <body>
 <table id="customers">
     <tr>
+        <th>ID</th>
         <th>Name</th>
         <th>Type</th>
         <th>Balance</th>
     </tr>
     <tr th:each="bankAccount: ${bank}">
+        <td th:text="${bankAccountStat.index}"></td>
         <td th:text="${bankAccount.getName()}" ></td>
         <td th:text="${bankAccount.getAnimalType()}" ></td>
         <td th:text="${bankAccount.getBalance()}" ></td>

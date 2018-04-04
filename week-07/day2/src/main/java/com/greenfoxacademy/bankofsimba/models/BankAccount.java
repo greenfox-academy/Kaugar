@@ -26,6 +26,7 @@ public class BankAccount {
     return animalType;
   }
 
+
   @Override
   public String toString() {
     return "BankAccount{" +
