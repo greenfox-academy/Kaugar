@@ -14,8 +14,8 @@ public class Bank {
     accounts.add(new BankAccount("Mufasa", 1000, "lion"));
     accounts.add(new BankAccount("Pumbaa", 5700, "warthog"));
     accounts.add(new BankAccount("Rafiki", 6456, "mandrill"));
-    accounts.add(new BankAccount("Timon", 2056, "meerkat"));
-    accounts.add(new BankAccount("Lion King", 99999, "lion"));
+    accounts.add(new BankAccount("Timon", 2056, "mongoose", false, true));
+    accounts.add(new BankAccount("Lion King", 99999, "lion", true, false));
   }
 
   public ArrayList<BankAccount> getAccounts() {

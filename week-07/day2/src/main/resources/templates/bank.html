@@ -3,6 +3,8 @@
 <head>
     <title>Thymeleaf Exercise #</title>
     <link rel="stylesheet" th:href="@{/style.css}" />
+    <link rel="stylesheet" th:href="@{/static/shinytext.css}" />
+
     <meta charset="utf-8" />
 <style>
     #customers {
@@ -10,7 +12,6 @@
         border-collapse: collapse;
         width: 100%;
     }
-
     #customers td, #customers th {
         border: 1px solid #ddd;
         padding: 8px;
@@ -36,12 +37,16 @@
         <th>Name</th>
         <th>Type</th>
         <th>Balance</th>
+        <th>King/Notking</th>
+        <th>Bad or Good Guy</th>
     </tr>
     <tr th:each="bankAccount: ${bank}">
         <td th:text="${bankAccountStat.index}"></td>
         <td th:text="${bankAccount.getName()}" ></td>
         <td th:text="${bankAccount.getAnimalType()}" ></td>
         <td th:text="${bankAccount.getBalance()}" ></td>
+        <td th:text="${bankAccount.isKing()} ? 'King' : 'Notking' " ></td>
+        <td th:text="${bankAccount.isBad()} ? 'Bad Guy' : 'Good One' " ></td>
     </tr>
 </table>
 </body>
