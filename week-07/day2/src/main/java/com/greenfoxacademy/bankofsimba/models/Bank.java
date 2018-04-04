@@ -21,4 +21,11 @@ public class Bank {
   public ArrayList<BankAccount> getAccounts() {
     return accounts;
   }
+
+  @Override
+  public String toString() {
+    return "Bank{" +
+            "accounts=" + accounts +
+            '}';
+  }
 }

@@ -5,11 +5,23 @@
     <link rel="stylesheet" th:href="@{/style.css}" />
     <meta charset="utf-8" />
 </head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
 <body>
-    <table>
-        <tr>
-
-        </tr>
-    </table>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Balance</th>
+    </tr>
+    <tr th:each="bankAccount: ${bank}">
+        <th th:text="${bankAccount.getName()}" ></th>
+        <th th:text="${bankAccount.getAnimalType()}" ></th>
+        <th th:text="${bankAccount.getBalance()}" ></th>
+    </tr>
+</table>
 </body>
 </html>
