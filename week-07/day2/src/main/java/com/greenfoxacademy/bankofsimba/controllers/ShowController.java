@@ -17,4 +17,12 @@ public class ShowController {
 
   }
 
+  @GetMapping(value = "/enjoy")
+  public String enjoyhtml (Model model){
+    model.addAttribute("text", "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>");
+    return "enjoy";
+  }
+  
+  @GetMapping(value = "/bank")
+  public String
 }
