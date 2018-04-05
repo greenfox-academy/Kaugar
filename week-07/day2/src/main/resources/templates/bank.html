@@ -25,12 +25,13 @@
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: left;
-        background-color: #4CAF50;
+        background-color: #af815c;
         color: white;
     }
 </style>
 </head>
 <body>
+<img src="https://screenrant.com/wp-content/uploads/2017/03/The-Lion-King-1994.jpg" width="100%" height="300px" >
 <table id="customers">
     <tr>
         <th>ID</th>
@@ -49,5 +50,10 @@
         <td th:text="${bankAccount.isBad()} ? 'Bad Guy' : 'Good One' " ></td>
     </tr>
 </table>
+<form  action="#" th:action="@{/newaccount}" th:object="${bank}" method='POST'>
+    <label>
+
+    </label>
+</form>
 </body>
 </html>

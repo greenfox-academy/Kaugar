@@ -4,7 +4,11 @@ import com.greenfoxacademy.bankofsimba.models.Bank;
 import com.greenfoxacademy.bankofsimba.models.BankAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class ShowController {
@@ -29,5 +33,11 @@ public class ShowController {
   public String Bank (Model model){
     model.addAttribute("bank", bank.getAccounts());
     return "bank";
+  }
+  public class accountCreator {
+    @RequestMapping(value = "/newaccount", method = RequestMethod.POST)
+    public String saveStudent(@ModelAttribute BankAccount bankAccount, BindingResult errors, Model model) {
+      return "bank";
+    }
   }
 }
