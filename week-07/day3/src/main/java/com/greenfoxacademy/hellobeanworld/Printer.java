@@ -1,12 +1,13 @@
 package com.greenfoxacademy.hellobeanworld;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
   @Service
   public class Printer {
-    public void log(String message) {
-      System.out.println(LocalDateTime.now() + " MY PRINTER SAYS --- " + message);
+    public String log(String message) {
+      return(LocalDateTime.now() + " MY PRINTER SAYS --- " + message);
     }
   }
