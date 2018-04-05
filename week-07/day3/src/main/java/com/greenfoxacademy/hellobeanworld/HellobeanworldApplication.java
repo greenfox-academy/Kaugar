@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class HellobeanworldApplication implements CommandLineRunner {
   @Autowired
-  SpellChecker checker;
+
 
 
 	public static void main(String[] args) {
