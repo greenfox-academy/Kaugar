@@ -3,9 +3,7 @@ package com.greenfoxacademy.hellobeanworld.controllers;
 import com.greenfoxacademy.hellobeanworld.services.UtilityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @org.springframework.stereotype.Controller
 public class Controller {
@@ -30,9 +28,19 @@ public class Controller {
   @GetMapping(value="/useful/email")
   public String email (Model model, @RequestParam(name = "email") String emailToCheck) {
     model.addAttribute("isValid", utilityService.validateEmail(emailToCheck));
-    model.addAttribute("email", emailToCheck);
+    model.addAttribute("emailToCheckBack", emailToCheck);
     return "email";
   }
 
+  @GetMapping(value = "/useful/caesar")
+  public String caesarForm (Model model) {
+    return "caesar";
+  }
 
+  @PostMapping(value = "useful/caesar")
+  public String caesarEncoder (@ModelAttribute(name = "textToEncode") String text, Model model,
+                               @ModelAttribute(name= "number") int number ){
+    model.addAttribute("encodedText", utilityService.caesar(text,number));
+    return "caesar";
+  }
 }
