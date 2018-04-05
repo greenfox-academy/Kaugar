@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<style>
+
+     .valid {
+        color: green;
+    }
+    .notvalid {
+        color: red;
+    }
+</style>
+<body>
+
+<p th:class="${isValid} ? valid : notvalid" th:text="${email}"></p>
+
+</body>
+</html>
