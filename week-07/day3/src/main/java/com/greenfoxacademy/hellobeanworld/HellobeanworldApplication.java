@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class HellobeanworldApplication implements CommandLineRunner {
   @Autowired
-
+  Printer printer;
 
 
 	public static void main(String[] args) {
@@ -16,6 +16,6 @@ public class HellobeanworldApplication implements CommandLineRunner {
 	}
 	@Override
 	public void run(String... args) throws Exception {
-		checker.checkSpelling();
+		printer.log("Hello");
 	}
 }
