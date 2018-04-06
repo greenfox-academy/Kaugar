@@ -8,9 +8,9 @@
 <h1>Caesar encoder</h1>
 <form action="#" th:action="@{/useful/caesar}" method="post">
     <label for="text">text</label>
-    <input type="text" id="text" name="textToEncode" />
+    <input type="text" id="text" name="textToEncode" required/>
     <label for="number">number</label>
-    <input type="number" id="number" name="number" />
+    <input type="number" id="number" name="number" required/>
 
     <input type="submit" value="submit" />
     <p th:text="${encodedText}"></p>

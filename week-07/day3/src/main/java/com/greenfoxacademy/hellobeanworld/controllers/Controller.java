@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotNull;
+
 @org.springframework.stereotype.Controller
 public class Controller {
 
@@ -39,8 +41,13 @@ public class Controller {
 
   @PostMapping(value = "useful/caesar")
   public String caesarEncoder (@ModelAttribute(name = "textToEncode") String text, Model model,
-                               @ModelAttribute(name= "number") int number ){
-    model.addAttribute("encodedText", utilityService.caesar(text,number));
-    return "caesar";
+                               @ModelAttribute(name= "number") String numberstr ) {
+    try{
+      Integer number = Integer.parseInt(numberstr);
+      model.addAttribute("encodedText", utilityService.caesar(text, number));
+      return "caesar";
+    }catch (NumberFormatException e){
+      return "redirect:/useful/caesar";
+    }
   }
 }

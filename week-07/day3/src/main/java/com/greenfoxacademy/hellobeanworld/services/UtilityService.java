@@ -2,6 +2,7 @@ package com.greenfoxacademy.hellobeanworld.services;
 
 import org.springframework.stereotype.Service;
 
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -9,6 +10,7 @@ import java.util.Random;
 public class UtilityService {
   ArrayList<String> colors;
   Random random;
+
 
   public UtilityService() {
     colors = new ArrayList<>();
@@ -28,7 +30,7 @@ public class UtilityService {
     return (email.contains("@") && email.contains("."));
   }
 
-  public String caesar(String text, int number) {
+  public String caesar(String text, Integer number) {
     String result = "";
     for(int i = 0; i < text.length(); i++) {
       result += (char)((int)text.charAt(i) + number);
