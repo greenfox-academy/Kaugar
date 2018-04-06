@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<style>
+    body {
+        border: 40px solid #6e6e6e;
+        outline: #6e6e6e solid 10px;
+        margin: auto;
+        padding: 20px;
+    }
+    .button {
+        background-color: #3cb878;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+<body>
+<a href="http://localhost:8080/info" class="button">Information</a>
+<br>
+<img th:src="@{grfox.png}" alt="a green fox" width="300" height="300">
+<br>
+<p>This is Mr.Fox, he is living on sandwich and beer!</p>
+<br>
+<h1>Known tricks</h1>
+<br>
+<ul>
+    <li>Code in Java</li>
+    <li>Act like he is listening</li>
+    <li>Be extrovert</li>
+</ul>
+</body>
+</html>
