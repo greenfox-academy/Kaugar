@@ -4,17 +4,17 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
-@Service
 public class Fox {
 
   private String name;
-  private ArrayList tricks;
+  private ArrayList<String> tricks;
   private String food;
   private String drink;
 
   public Fox(String name) {
-    this.name = name;
+    this.name = "foxy";
   }
+
 
   public void setName(String name) {
     this.name = name;
