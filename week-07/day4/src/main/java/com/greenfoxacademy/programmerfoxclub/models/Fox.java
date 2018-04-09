@@ -24,4 +24,7 @@ public class Fox {
   public String getName() {
     return name;
   }
+  public void addTricks (){
+
+  }
 }

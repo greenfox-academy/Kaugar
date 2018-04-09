@@ -32,6 +32,8 @@
 <p th:text="'This is ' + ${nameOfPet} + ', he is living on sandwich and beer!'"></p>
 <br>
 <h1>Known tricks</h1>
+<span th:if="${tricks} == 0 " th:text="Male" ></span>
+<span th:unless="${tricks} "></span>
 <br>
 <ul>
     <li>Code in Java</li>

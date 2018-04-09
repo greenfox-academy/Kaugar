@@ -1,5 +1,6 @@
 package com.greenfoxacademy.programmerfoxclub.controllers;
 
+import com.greenfoxacademy.programmerfoxclub.database.FoxDb;
 import com.greenfoxacademy.programmerfoxclub.models.Fox;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,10 +14,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MainController {
 
   Fox fox;
+  @Autowired
+  FoxDb foxDb;
 
   @GetMapping(value = "/")
   public String link(@RequestParam(name = "nameOfPet", required = false) String nameOfPet, Model model) {
     fox = new Fox(nameOfPet);
+    foxDb.addFox(fox);
     model.addAttribute("nameOfPet", fox.getName());
     return "index";
   }
