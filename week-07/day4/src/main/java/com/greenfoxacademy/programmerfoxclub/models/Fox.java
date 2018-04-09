@@ -1,5 +1,6 @@
 package com.greenfoxacademy.programmerfoxclub.models;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class Fox {
   private String drink;
 
   public Fox(String name) {
-    this.name = "foxy";
+    this.name = name;
   }
 
 
