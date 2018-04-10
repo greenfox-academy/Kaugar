@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<style>
+    #customers {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
+<body>
+<h1>Todos for today:</h1>
+<table id="customers">
+    <tr>
+        <th>ID</th>
+        <th>Action</th>
+        <th>Done</th>
+        <th>Urgent</th>
+    </tr>
+    <tr th:each="todo: ${todos}">
+        <td th:text="${todo.getId()}"></td>
+        <td th:text="${todo.getTitle()}"></td>
+        <td th:text="${todo.isDone()}"></td>
+        <td th:text="${todo.isUrgent()}"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,4 +1,7 @@
-package com.greenfoxacademy.listingtodos.models;
+package com.greenfoxacademy.todolistwithmsql.models;
+
+import org.hibernate.annotations.Filter;
+import org.hibernate.annotations.Filters;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

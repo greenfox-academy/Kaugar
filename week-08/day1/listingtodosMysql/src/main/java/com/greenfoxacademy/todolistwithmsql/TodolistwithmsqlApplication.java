@@ -1,24 +1,23 @@
-package com.greenfoxacademy.listingtodos;
+package com.greenfoxacademy.todolistwithmsql;
 
-import com.greenfoxacademy.listingtodos.models.Todo;
-import com.greenfoxacademy.listingtodos.repository.TodoInterface;
+import com.greenfoxacademy.todolistwithmsql.repository.TodoInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ListingtodosApplication implements CommandLineRunner {
+public class TodolistwithmsqlApplication implements CommandLineRunner {
   @Autowired
   TodoInterface todoInterface;
 
   public static void main(String[] args) {
-    SpringApplication.run(ListingtodosApplication.class, args);
+    SpringApplication.run(TodolistwithmsqlApplication.class, args);
   }
 
   @Override
   public void run(String... args) throws Exception {
-    todoInterface.save(new Todo("Buy Milk"));
-    todoInterface.save(new Todo("Go to school"));
+
+
   }
 }
