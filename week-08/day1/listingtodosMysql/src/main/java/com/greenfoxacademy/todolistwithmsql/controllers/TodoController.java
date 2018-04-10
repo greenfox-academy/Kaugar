@@ -33,6 +33,11 @@ public class TodoController {
     model.addAttribute("todos", todoInterface.save(new Todo(titleOfTask)));
     return "redirect:/todo";
   }
+  @GetMapping (value = "/{id}/delete")
+  public String deleteTask (@PathVariable(name = "id") Long id){
+    todoInterface.deleteById(id);
+    return "redirect:/todo";
+  }
 
   @GetMapping(value ={ "/", "/list"})
   @ResponseBody

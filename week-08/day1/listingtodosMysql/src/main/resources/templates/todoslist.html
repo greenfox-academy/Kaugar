@@ -6,6 +6,9 @@
 </head>
 
 <style>
+    body{
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    }
     #customers {
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
         border-collapse: collapse;
@@ -36,7 +39,19 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .smallbutton {
+        background-color: #3cb878;
+        border: none;
+        color: white;
+        padding: 10px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
         margin: 4px 2px;
         cursor: pointer;
     }
@@ -49,12 +64,16 @@
         <th>Action</th>
         <th>Done</th>
         <th>Urgent</th>
+        <th>Delete</th>
     </tr>
     <tr th:each="todo: ${todos}">
         <td th:text="${todo.getId()}"></td>
         <td th:text="${todo.getTitle()}"></td>
         <td th:text="${todo.isDone()}"></td>
         <td th:text="${todo.isUrgent()}"></td>
+        <td>
+        <a th:href="'/' + ${todo.getId()} + '/delete'" class="smallbutton">Delete</a>
+    </td>
     </tr>
 </table>
 <br>
