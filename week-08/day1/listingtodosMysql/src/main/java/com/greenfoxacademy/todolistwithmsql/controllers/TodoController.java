@@ -1,13 +1,12 @@
 package com.greenfoxacademy.todolistwithmsql.controllers;
 
 
+import com.greenfoxacademy.todolistwithmsql.models.Todo;
 import com.greenfoxacademy.todolistwithmsql.repository.TodoInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class TodoController {
@@ -20,11 +19,20 @@ public class TodoController {
     if(isDone == null){
       model.addAttribute("todos", todoInterface.findAll());
     } else {
-      model.addAttribute("todos", todoInterface.findBydone(!isDone));
+      model.addAttribute("todos", todoInterface.findByDone(!isDone));
     }
     return "todoslist";
   }
 
+  @GetMapping (value = "/addnewtask")
+  public String addTask (){
+  return "addtask";
+  }
+  @PostMapping (value = "/addnewtask")
+  public String addNewTask (Model model, @ModelAttribute(name = "titleOfTask") String titleOfTask){
+    model.addAttribute("todos", todoInterface.save(new Todo(titleOfTask)));
+    return "redirect:/todo";
+  }
 
   @GetMapping(value ={ "/", "/list"})
   @ResponseBody

@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface TodoInterface extends CrudRepository<Todo,Long> {
 
-  List<Todo> findBydone (boolean done);
+  List<Todo> findByDone (boolean done);
 }
