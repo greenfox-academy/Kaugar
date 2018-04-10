@@ -1,4 +1,4 @@
-package com.greenfoxacademy.listingtodos;
+package com.greenfoxacademy.listingtodos.models;
 
 public class Todo {
 
