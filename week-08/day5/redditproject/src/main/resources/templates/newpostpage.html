@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add post - Reddit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div class="container">
+<h1>Add a post</h1>
+<form action="#" th:action="@{/newpost}" th:object="${post}" method="post">
+    Post title: <input th:placeholder="'Title'" type="text" th:field="*{title}" />
+    Post URL: <input th:placeholder="'URL'" type="text" th:field="*{url}" />
+    <input type="submit" value="add" />
+</form>
+</div>
+</body>
+</html>

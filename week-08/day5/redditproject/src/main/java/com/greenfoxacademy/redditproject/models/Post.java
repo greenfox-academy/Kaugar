@@ -1,7 +1,7 @@
 package com.greenfoxacademy.redditproject.models;
 
-import org.springframework.data.annotation.Id;
 
+import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -55,5 +55,8 @@ public class Post {
 
   public void setVote(int vote) {
     this.vote = vote;
+  }
+  public void voteUp(){
+    this.vote++;
   }
 }
