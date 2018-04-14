@@ -32,12 +32,14 @@ public class RedditController {
   }
   @GetMapping(value = "/{id}/voteup")
   public String voteUp(@PathVariable(name = "id") Long id) {
-    postRepository.findById(id).get().setVote(+1);
+    postRepository.findById(id).get().voteUp();
+    postRepository.save(postRepository.findById(id).get());
     return "redirect:/reddit";
   }
   @GetMapping(value = "/{id}/votedown")
-  public String votedown(@PathVariable(name = "id") Long id) {
-    postRepository.findById(id).get().setVote(-1);
+  public String voteDown(@PathVariable(name = "id") Long id) {
+    postRepository.findById(id).get().voteDown();
+    postRepository.save(postRepository.findById(id).get());
     return "redirect:/reddit";
   }
 

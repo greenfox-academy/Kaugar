@@ -21,12 +21,12 @@
         <tr th:each="post: ${posts}">
             <td th:text="${post.getVote()}"></td>
             <td>
-                <a th:href="'/' + ${post.getId()} + '/voteup'" class="btn btn-primary">Up</a>
+                <a th:href="'/' + ${post.getId()} + '/voteup'" class="glyphicon glyphicon-menu-up">Up</a>
             </td>
             <td>
-                <a th:href="'/' + ${post.getId()} + '/votedown'" class="btn btn-danger">Down</a>
+                <a th:href="'/' + ${post.getId()} + '/votedown'" class="glyphicon glyphicon-menu-down">Down</a>
             </td>
-            <td th:text="${post.getTitle()}"></td>
+            <td> <a th:href="${post.url}" th:text="${post.getTitle()}" th:target="_blank"></a> </td>
         </tr>
     </table>
     <br>

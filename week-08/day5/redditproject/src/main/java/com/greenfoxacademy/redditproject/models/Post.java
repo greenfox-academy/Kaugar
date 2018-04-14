@@ -19,7 +19,6 @@ public class Post {
   public Post(String title, String url) {
     this.title = title;
     this.url = url;
-    vote = 0;
   }
 
   public Post() {
@@ -56,7 +55,14 @@ public class Post {
   public void setVote(int vote) {
     this.vote = vote;
   }
+
   public void voteUp(){
     this.vote++;
+  }
+
+  public void voteDown(){
+    if(this.vote > 0){
+      this.vote--;
+    }
   }
 }
