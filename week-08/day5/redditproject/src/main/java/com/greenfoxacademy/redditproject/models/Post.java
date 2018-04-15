@@ -5,6 +5,10 @@ import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import java.time.LocalDateTime;
+
+import static java.time.LocalDateTime.now;
+
 
 @Entity
 public class Post {
@@ -15,13 +19,16 @@ public class Post {
   private String title;
   private String url;
   private int vote;
+  private LocalDateTime createdAt;
 
   public Post(String title, String url) {
     this.title = title;
     this.url = url;
+    this.createdAt = now();
   }
 
   public Post() {
+    this.createdAt = now();
   }
 
   public long getId() {
