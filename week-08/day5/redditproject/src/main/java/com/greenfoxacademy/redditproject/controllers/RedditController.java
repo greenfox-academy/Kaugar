@@ -17,7 +17,7 @@ public class RedditController {
 
   @GetMapping(value = "/reddit")
   public String reddit(Model model){
-    model.addAttribute("posts", postRepository.findAll());
+    model.addAttribute("posts", postRepository.findAllByOrderByVoteDesc());
     return "homepage";
   }
   @GetMapping(value = "/newpost")
