@@ -72,4 +72,8 @@ public class Post {
       this.vote--;
     }
   }
+
+  public LocalDateTime getCreatedAt() {
+    return createdAt;
+  }
 }
