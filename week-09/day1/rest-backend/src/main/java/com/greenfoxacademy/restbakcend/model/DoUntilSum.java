@@ -1,22 +1,15 @@
 package com.greenfoxacademy.restbakcend.model;
 
-public class DoUntil {
-  Integer result;
+public class DoUntilSum {
+  private Integer result = 0;
 
-  public DoUntil(int until, String operation) {
-    this.result = 0;
-    if (operation.equals("sum")){
+  public DoUntilSum(Integer until) {
       for (int i = 1; i <= until; i++) {
         this.result += i;
       }
-    }else if (operation.equals("factor")){
-      for (int i = 1; i <= until; i++) {
-        this.result *= i;
-      }
-    }
   }
 
-  public DoUntil() {
+  public DoUntilSum() {
   }
 
   public Integer getResult() {

@@ -5,11 +5,7 @@ public class Greeting {
   String error;
 
   public Greeting(String name, String title) {
-    this.welcome_message = "Hi there " + name + " my dear " + title;
-  }
-
-  public Greeting(String name) {
-    this.error = "Please provide a title";
+    this.welcome_message = "Oh, hi there " + name + ", my dear " + title + "!";
   }
 
   public String getWelcome_message() {
