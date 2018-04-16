@@ -10,10 +10,13 @@ public class DoUntil {
         this.result += i;
       }
     }else if (operation.equals("factor")){
-      for (int i = 0; i < until; i++) {
+      for (int i = 1; i <= until; i++) {
         this.result *= i;
       }
     }
+  }
+
+  public DoUntil() {
   }
 
   public Integer getResult() {
