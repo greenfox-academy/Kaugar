@@ -8,8 +8,8 @@ public class Greeting {
     this.welcome_message = "Hi there " + name + " my dear " + title;
   }
 
-  public Greeting() {
-    this.error = "Please provide a name";
+  public Greeting(String name) {
+    this.error = "Please provide a title";
   }
 
   public String getWelcome_message() {

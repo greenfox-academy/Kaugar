@@ -2,12 +2,9 @@ package com.greenfoxacademy.restbakcend.controller;
 
 import com.greenfoxacademy.restbakcend.model.Appenda;
 import com.greenfoxacademy.restbakcend.model.Doubling;
+import com.greenfoxacademy.restbakcend.model.DoUntil;
 import com.greenfoxacademy.restbakcend.model.Greeting;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
@@ -36,5 +33,10 @@ public class RestController {
   public Object appender(@PathVariable (value = "appendable") String word){
     Appenda appenda = new Appenda(word);
     return appenda;
+  }
+  @PostMapping(value = "/dountil/{what}")
+  public Object dountil(@PathVariable (value = "what") String operation, @RequestParam (value = "until") Integer number){
+    DoUntil doUntil = new DoUntil(number,operation);
+    return doUntil;
   }
 }
