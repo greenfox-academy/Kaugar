@@ -24,9 +24,9 @@ public class RestController {
   @GetMapping(value = "/greeter")
   public Object greeter(@RequestParam(value = "name", required = false) String name,
                         @RequestParam(value = "title", required = false) String title) {
-    if (name != null && title != null) {
+    if (name != null) {
       return new Greeting(name, title);
-    } else if (name != null && title == null) {
+    } else if (title == null) {
       return new Error("Please provide a title!");
     } else {
       return new Error("Please provide a name!");

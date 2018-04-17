@@ -2,8 +2,8 @@ package com.greenfoxacademy.restbakcend.model;
 
 public class Doubling {
 
-  int received;
-  int result;
+  Integer received;
+  Integer result;
 
   public Doubling(int received) {
     this.received = received;
