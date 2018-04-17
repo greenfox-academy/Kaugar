@@ -67,8 +67,7 @@ public class RestControllerTest {
   }
   @Test
   public void appendaTest() throws Exception {
-    mockMvc.perform(get("/appenda/kuty")
-            .param("input",""))
+    mockMvc.perform(get("/appenda/kuty"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.appended").value("kutya"));
   }
