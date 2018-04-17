@@ -39,31 +39,33 @@ public class GuardianControllerTest {
   private WebApplicationContext webApplicationContext;
 
 
-
   @Test
   public void greetGroot() throws Exception {
     mockMvc.perform(get("/groot")
-            .param("message","somemessage"))
+            .param("message", "somemessage"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.translated").value("I am groot"))
             .andExpect(jsonPath("$.received").value("somemessage"));
   }
+
   @Test
   public void greetGrootError() throws Exception {
     mockMvc.perform(get("/groot"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.error").value("I am groot"));
   }
+
   @Test
   public void yonduTest() throws Exception {
     mockMvc.perform(get("/yondu")
-            .param("distance","100.0")
+            .param("distance", "100.0")
             .param("time", "10"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.distance").value(100.0))
             .andExpect(jsonPath("$.time").value(10.0))
             .andExpect(jsonPath("$.speed").value(10.0));
   }
+
   @Test
   public void yonduTestError() throws Exception {
     mockMvc.perform(get("/yondu")

@@ -1,6 +1,7 @@
 package com.greenfoxacademy.resttest.controllers;
 
 
+import com.greenfoxacademy.resttest.models.Cargo;
 import com.greenfoxacademy.resttest.models.Errormsg;
 import com.greenfoxacademy.resttest.models.Groot;
 import com.greenfoxacademy.resttest.models.Yondu;
@@ -16,14 +17,13 @@ public class GuardianController {
 
   @GetMapping (value = "/groot")
   public Groot greetGroot(@RequestParam(value = "message", required = false) String somemessage){
-    Groot groot = new Groot();
     if (somemessage != null){
       return new Groot(somemessage);
     } else {
-      groot.setError("I am groot");
+      return new Groot();
     }
-    return groot;
   }
+
   @GetMapping (value = "/yondu")
   public Object yondu(@RequestParam(value = "distance", required = false) Double distance,
                      @RequestParam(value = "time", required = false) Double time){
@@ -32,6 +32,11 @@ public class GuardianController {
     } else {
       return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Errormsg("Error"));
     }
+  }
+
+  @GetMapping (value = "/rocket")
+  public Cargo cargo(){
+    return new Cargo();
   }
 
 
